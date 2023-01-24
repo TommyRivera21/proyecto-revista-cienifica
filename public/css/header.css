@@ -1,0 +1,169 @@
+/*=====================================
+/*  INICIO DE RESETEO DE CSS
+esto solo resetea las configuraciones iniciales */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+a,
+li {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+/* FIN DE RESETEO DE CSS */
+
+/* INICIO DE DECLARACION DE VARIABLES
+         variables con las que se trabajaran */
+:root {
+    --primarycolor: #313B50;
+    --secondarycolor: #ffffff;
+    --thirdcolor: #434c61;
+    --fourthcolor: #367588;
+    --cancel: #56070c;
+    --primarytext: 'Montserrat', sans-serif;
+    --secondtext: "Dancing Script", cursive;
+    --shadow: rgba(0, 0, 0, 0.75);
+        }
+/* FIN DE DECLARACION DE VARIABLES */
+/* Header */
+
+header {
+    width: 100%;
+    height: 200px;
+    background: #95e7c5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(140, 40%, 52%, 0.459), hsla(194, 45%, 52%, 0.664));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(140, 40%, 52%, 0.459), hsla(194, 45%, 52%, 0.664));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+}
+
+.header-div {
+    display: flex;
+    padding: 0 10px;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.header-div-input {
+    width: 20%;
+    border: 0.5px solid white;
+    outline: none;
+    font-size: 20px;
+    padding: 5px 16px;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+
+.header-div-input:hover {
+    width: 30%;
+    background: var(--secondarycolor);
+}
+
+.header-div-input:focus {
+    width: 30%;
+    background: var(--secondarycolor);
+}
+
+.header-div-icon {
+    position: absolute;
+    padding: 5px 15px 0 5px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40%;
+}
+
+.header-div-icon:hover {
+    color: white;
+}
+
+nav{
+    text-align: right;
+    padding: 30px 30px 0 0;
+    margin-bottom: 10px;
+}
+
+.container-name{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-name{
+    max-width: 25%;
+    padding: 15px;
+    color: var(--thirdcolor);
+    border-bottom: 5px solid var(--thirdcolor);
+    margin-left: 40px;
+    font-weight: 550;
+}
+
+.nav-aa{
+    color:#fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.nav-aa:hover{
+    text-decoration: underline;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color:#fff;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width:400px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    .nav-aa{
+        margin-right: 5px;
+    }
+
+    .textos-header h1{
+        font-size: 35px;
+    }
+
+    .textos-header h2{
+        font-size: 20px;
+    }
+}

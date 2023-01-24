@@ -1,0 +1,59 @@
+[
+    [
+        { "nombre": "Masculino" },
+        { "nombre": "Femenino" },
+        { "nombre": "Prefiero no contestar" },
+        { "nombre": "Otro" }
+    ],
+    [
+        { "id": 1, "nombre": "Ecuador" },
+        { "id": 2, "nombre": "Colombia" },
+        { "id": 3, "nombre": "Chile" },
+        { "id": 4, "nombre": "Perú" },
+        { "id": 5, "nombre": "Brasil" },
+        { "id": 6, "nombre": "Argentina" }
+    ],
+    [
+        { "id": 1, "nombre": "Manta", "idPais": 1 },
+        { "id": 2, "nombre": "Montecristi", "idPais": 1 },
+        { "id": 3, "nombre": "JipiJapa", "idPais": 1 },
+        { "id": 4, "nombre": "Guayaquil", "idPais": 1 },
+        { "id": 5, "nombre": "Quito", "idPais": 1 },
+        { "id": 6, "nombre": "Chone", "idPais": 1 },
+        { "id": 7, "nombre": "Jaramijo", "idPais": 1 },
+        { "id": 8, "nombre": "Cuenca", "idPais": 1 },
+        { "id": 9, "nombre": "Ambato", "idPais": 1 },
+        { "id": 10, "nombre": "Otavalo", "idPais": 1 },
+        { "id": 11, "nombre": "Bogotá", "idPais": 2 },
+        { "id": 12, "nombre": "Medellín", "idPais": 2 },
+        { "id": 13, "nombre": "Cali", "idPais": 2 },
+        { "id": 14, "nombre": "Pasto", "idPais": 2 },
+        { "id": 15, "nombre": "Neiva", "idPais": 2 },
+        { "id": 16, "nombre": "Perreira", "idPais": 2 },
+        { "id": 17, "nombre": "Ipiales", "idPais": 2 },
+        { "id": 18, "nombre": "Santiago", "idPais": 3 },
+        { "id": 19, "nombre": "Concepción", "idPais": 3 },
+        { "id": 20, "nombre": "Viña del Mar", "idPais": 3 },
+        { "id": 21, "nombre": "Antofagasta", "idPais": 3 },
+        { "id": 22, "nombre": "La Serena", "idPais": 3 },
+        { "id": 23, "nombre": "Lima", "idPais": 4 },
+        { "id": 24, "nombre": "Arequipa", "idPais": 4 },
+        { "id": 25, "nombre": "Callao", "idPais": 4 },
+        { "id": 26, "nombre": "Cuzco", "idPais": 4 },
+        { "id": 27, "nombre": "Trujillo", "idPais": 4 },
+        { "id": 28, "nombre": "Brasilia", "idPais": 5 },
+        { "id": 29, "nombre": "Sao Paulo", "idPais": 5 },
+        { "id": 30, "nombre": "Rio de Janeiro", "idPais": 5 },
+        { "id": 31, "nombre": "Salvador", "idPais": 5 },
+        { "id": 32, "nombre": "Belo Horizonte", "idPais": 5 },
+        { "id": 33, "nombre": "Buenos Aires", "idPais": 6 },
+        { "id": 34, "nombre": "Córdoba", "idPais": 6 },
+        { "id": 35, "nombre": "Rosario", "idPais": 6 },
+        { "id": 36, "nombre": "Mendoza", "idPais": 6 },
+        { "id": 37, "nombre": "La Plata", "idPais": 6 }
+    ]
+]
+
+
+
+

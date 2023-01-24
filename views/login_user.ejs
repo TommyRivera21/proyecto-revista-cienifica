@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <%- include ('template/head') %>
+        <title>Login</title>
+        <!-- link para los estilos CSS locales  -->
+        <link rel="stylesheet" href="css/login.css">
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous"
+        />
+
+        <!-- link para acceder a los iconos -->
+        <link
+            rel="stylesheet"
+            href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+        />
+    </head>
+    <body>
+    <!-- Inicio de la cabecera -->
+    <%- include ('template/header') %>
+    <!-- Fin de la cabecera -->
+        <main class="container">
+            <section class="form-box">
+                <div class="button-box">
+                    <a href="/login" class="toggle-btn">Iniciar Sesión</a>
+                    <a href="/registro" class="toggle-btn">Registrate</a>
+                </div>
+                <div class="redes-sociales">
+                    <img src="images/fb.png" alt="icono_facebook">
+                    <img src="images/g.png" alt="icono_twitter">
+                    <img src="images/tw.png" alt="icono_google">
+                </div>
+                <p class="warning" id="warning"></p>
+                <form 
+                    id="login"
+                    class="form-login"
+                    action="/login-auth" 
+                    method="POST">
+                    <input 
+                        id="email"
+                        name="email"
+                        type="text" 
+                        class="input-field"
+                        placeholder="Correo electronico"
+                        />
+                    <input 
+                        id="password"
+                        name="password"
+                        type="password" 
+                        class="input-field" 
+                        placeholder="Contraseña" 
+                        />
+                    <div>
+                        <input type="submit" class="submit-btn" value="Ingresar"/>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <!--Inicio del FOOTER-->
+        <%- include ('template/footer') %>
+        <!--Final del FOOTER-->
+
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <% if (typeof alert != "undefined"){%>
+        <script>
+            Swal.fire({
+                title:'<%= alertTitle %>',
+                text:'<%= alertMessage %>',
+                icon:'<%= alertIcon %>',
+                showConfirmButton:<%=showConfirmButton %>,
+                timer: <%= timer %>
+
+            }).then(()=>{
+                window.location='/<%= ruta %>'
+            })
+        </script>
+        <% } %>
+        <script type="text/javascript" src="js/login.js"></script>
+    </body>
+</html>
+

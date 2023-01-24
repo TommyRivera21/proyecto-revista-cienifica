@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include ('template/head') %>
+    <title>Sobre Nosotros</title>
+    <!-- link para acceder a los iconos -->
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+    <!--Link para los estilos CSS locales-->
+    <link rel="stylesheet" href="css/about_us.css"/> 
+    <link rel="shortcut icon" href="images/libro.png" type="image/x-icon">
+  </head>
+  <body>
+    <!--Comienzo de la cabecera -->
+      <%- include ('template/header') %>
+    <!--fin de la cabecera-->
+      <main class="body">
+        <div class="body-div-img">
+          <img src="https://cdn.discordapp.com/attachments/788638647116103736/907321794468405268/logo1.png" alt=""/>
+          </div>
+        <div class="body-title">
+          <h1>Sobre Nosotros</h1>
+        </div>
+        <div class="body-text">
+          <p class=>
+            Facci Library ayudar a los estudiantes a ingresar a una gestión de publicaciones científicas de la FACCi, gracias a esto se pueden organizar fácil y rápidamente. Esta página nació el presente año 2021 y quiere ser la web de gestión de documentos científicos con mayor aceptación de parte de los estudiantes, con un fácil acceso y con una gran variedad de recursos a los cuales poder ingresar con facilidad, eficiencia y libertad.
+          </p>
+            <p>
+              Con Facci Library tendrás gran variedad de contenido, un directorio por el cual desplazarte y buscar el documento que más se acople a lo que necesitas en el momento, gracias a la más cuidada selección de proveedores y las herramientas online del momento para que puedas organizar ya sea desde tu computador o desde un dispositivo móvil. 
+            </p>
+        </div>
+      </main>
+      <!--Inicio del FOOTER-->
+        <%- include ('template/footer') %>
+      <!--Final del FOOTER-->
+  </body>
+</html>

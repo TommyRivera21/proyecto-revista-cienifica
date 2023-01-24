@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include ('template/head') %>
+    <title>Contacto</title>
+    <!--Link para los estilos CSS locales-->
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <!--Comienzo de la cabecera -->
+    <%- include ('template/header') %>
+    <!--fin de la cabecera-->
+    
+    <main class="body">
+      <div class="formulario">
+        <form
+          id="contacto"
+          action="envio-contacto"
+          method="POST">
+          <h1 class="formulario__titulo">Contáctenos</h1>
+          <p class="warning" id="warning"></p>
+
+          <input id="name" name="name" type="text" class="formulario__input" />
+          <label for="name" class="formulario__label">Nombres</label>
+
+          <input id="email" name="email" type="text" class="formulario__input" />
+          <label for="email" class="formulario__label">Correo</label>
+
+          <input id="tel" name="tel" type="text" class="formulario__input" />
+          <label for="tel" class="formulario__label">Teléfono</label>
+
+          <textarea
+            class="special-textarea"
+            name="content"
+            id="mesage"
+            cols="30"
+            rows="5"
+          ></textarea>
+          <label for="mesage" class="formulario__label special-label">Mensaje</label>
+          <button type="submit" class="formulario__submit" onclick="send()">Enviar</button>
+        </form>
+      </div>
+    </main>
+    <!--Inicio del FOOTER-->
+    <%- include ('template/footer') %>
+    <!--Final del FOOTER-->
+    <script src="js/contact.js"></script>
+  </body>
+</html>

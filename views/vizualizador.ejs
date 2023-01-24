@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include ('template/head') %>
+    <title>Revista Científica - FACCI | Vizualizador</title>
+</head>
+<body>
+    <span id="pdffFile"><%= ARTICULOS.AR_FILE%>.pdf</span>
+    <embed 
+        id="vistaPrevia" 
+        type="application/pdf" 
+        width="100%" 
+        height="100%">
+    <script src="/js/subirarchivos.js"></script>
+</body>
+
+</html>

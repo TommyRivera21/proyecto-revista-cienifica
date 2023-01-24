@@ -1,0 +1,50 @@
+var imagen_max = document.getElementById("imagen_grande");
+var imagen_1 = document.getElementById("img_1");
+var imagen_2 = document.getElementById("img_2");
+var imagen_3 = document.getElementById("img_3");
+var borde = document.getElementById("borde");
+var borde_1 = document.getElementById("borde1");
+var borde_2 = document.getElementById("borde2");
+
+imagen_1.onclick = function () {
+  imagen_max.src = imagen_1.src;
+  imagen_max.style.height = "500px";
+  imagen_max.style.width = "450px";
+  borde.style.borderStyle = "solid";
+  borde.style.borderColor = "#31daa78e";
+  borde.style.borderWidth = "2px";
+  borde_1.style.borderStyle = "none";
+  borde_1.style.borderColor = "none";
+  borde_1.style.borderWidth = "none";
+  borde_2.style.borderStyle = "none";
+  borde_2.style.borderColor = "none";
+  borde_2.style.borderWidth = "none";
+};
+imagen_2.onclick = function () {
+  imagen_max.src = imagen_2.src;
+  imagen_max.style.height = "500px";
+  imagen_max.style.width = "450px";
+  borde_1.style.borderStyle = "solid";
+  borde_1.style.borderColor = "#31daa78e";
+  borde_1.style.borderWidth = "2px";
+  borde.style.borderStyle = "none";
+  borde.style.borderColor = "none";
+  borde.style.borderWidth = "none";
+  borde_2.style.borderStyle = "none";
+  borde_2.style.borderColor = "none";
+  borde_2.style.borderWidth = "none";
+};
+imagen_3.onclick = function () {
+  imagen_max.src = imagen_3.src;
+  imagen_max.style.height = "500px";
+  imagen_max.style.width = "450px";
+  borde_2.style.borderStyle = "solid";
+  borde_2.style.borderColor = "#31daa78e";
+  borde_2.style.borderWidth = "2px";
+  borde_1.style.borderStyle = "none";
+  borde_1.style.borderColor = "none";
+  borde_1.style.borderWidth = "none";
+  borde.style.borderStyle = "none";
+  borde.style.borderColor = "none";
+  borde.style.borderWidth = "none";
+};

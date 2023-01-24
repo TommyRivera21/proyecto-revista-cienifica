@@ -1,0 +1,11 @@
+.table{
+    --bs-table-bg: #707070;
+    --bs-table-striped-bg: #797979;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #8a8a8a;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: #6d6d6d;
+    --bs-table-hover-color: #fff;
+    color: #fff;
+    border-color: #373b3e;
+}

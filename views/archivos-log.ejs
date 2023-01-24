@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include ('template/head') %>
+    <title>Archivos</title>
+    <!--Link para los estilos CSS locales-->
+    <link rel="stylesheet" href="css/archivos.css">
+    <!-- Bootstrap CSS -->
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous"
+        />
+    <link
+            rel="stylesheet"
+            href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css"
+        />
+</head>
+<body>
+<!-- Inicio de la cabecera -->
+<% if (login){%> <%- include ('template/header-user-log' , {nombre:name}) %>
+<!-- Fin de la cabecera -->
+    <main>
+        <section>
+            <div class="cards">
+                <div class="card">
+                    <button>
+                        <a href="/create" class="boton1">Subir Artículo</a>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+        <section class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Títulos Recientes</h2>
+                <br>
+                <div class="galeria-port">
+                    <div class="imagen-port">
+                        <img src="images/libro1.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="icon/leer icon.png" alt="">
+                            <p>Ver</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="images/libro2.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="icon/leer icon.png" alt="">
+                            <p>Ver</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="images/libro3.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="icon/leer icon.png" alt="">
+                            <p>Ver</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="images/libro4.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="icon/leer icon.png" alt="">
+                            <p>Ver</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+    </main>
+    <!--Inicio del FOOTER-->
+    <%- include ('template/footer') %>
+    <!--Final del FOOTER-->
+
+    <!-- Caso cuando no sea logeado -->
+    <%} else{%> <%- include ('template/header') %> <%- include ('user' ) %>  <%- include ('template/footer') %> <%}%>
+</body>
+</html>

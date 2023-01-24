@@ -1,0 +1,123 @@
+/*=====================================
+/*  INICIO DE RESETEO DE CSS
+esto solo resetea las configuraciones iniciales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  }
+  a,
+  li {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  }
+/* FIN DE RESETEO DE CSS */
+
+/* INICIO DE DECLARACION DE VARIABLES
+       variables con las que se trabajaran */
+:root {
+  --primarycolor: #313B50;
+  --secondarycolor: #efefef;
+  --thirdcolor: #434c61;
+  --fourthcolor: #367588;
+  --cancel: #56070c;
+  --primarytext: "Montserrat", sans-serif;
+  --secondtext: "Dancing Script", cursive;
+  --shadow: rgba(0, 0, 0, 0.75);
+}
+
+body {
+  margin: 0px;
+  background-color:var(--secondarycolor)
+}
+
+.container-datos {
+  margin-top: 3rem;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  max-width: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+  background-color: #fff;
+  border-radius: 15px;
+  font-size: 14px;
+  margin-bottom: 3rem;
+}
+
+.titulo-articulo{
+  margin: 0 auto;
+  align-items: center;
+}
+
+.titulo-articulo-h3{
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+
+.img-pdf{
+  flex: 1 0 0%;
+  position: static;
+  flex-direction: column;
+  justify-content: center;
+  word-wrap: break-word;
+  margin-top: 4rem;
+
+}
+
+.i-pdf{
+    margin-left: -20px;
+    width: 5rem;
+}
+
+.button-box{
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+
+}
+
+.div_btn{
+    align-items: center;
+}
+
+.datos-articulo{
+    margin-top: 2rem;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    padding: 10px;
+}
+
+.datos-articulo-titulo{
+  margin:0 auto;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+.datos-label{
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.datos-span{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #676b70;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}

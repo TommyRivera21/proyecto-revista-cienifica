@@ -1,0 +1,76 @@
+body {
+  background: rgba(0, 0, 0, 0.164);
+}
+/* INICIO DE DECLARACION DE VARIABLES
+       variables con las que se trabajaran */
+:root {
+  --primarycolor: #009b94;
+  --secondarycolor: #efefef;
+  --thirdcolor: #1a2537;
+  --fourthcolor: #367588;
+  --primarytext: "Roboto", sans-serif;
+  --secondtext: "Dancing Script", cursive;
+  --shadow: rgba(0, 0, 0, 0.75);
+}
+/* FIN DE DECLARACION DE VARIABLES */
+.error-container {
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: montserrat, sans-serif;
+}
+
+.big-text {
+  font-size: 200px;
+  font-weight: 900;
+  font-family: sans-serif;
+  background: url(../images/fondo\ 404.jpg) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-position: center;
+}
+
+.small-text {
+  font-family: montserrat, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.button {
+  color: #fff;
+  padding: 12px 36px;
+  font-weight: 600;
+  border: none;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  display: inline-block;
+  text-transform: uppercase;
+  -webkit-border-radius: 90px;
+  -moz-border-radius: 90px;
+  border-radius: 90px;
+  margin: 2px;
+  background-image: linear-gradient(
+    to right,
+    #138664 0%,
+    #16120d 51%,
+    #138664 100%
+  );
+  background-size: 200% auto;
+  flex: 1 1 auto;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus {
+  color: #ffffff;
+  background-position: right center;
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}

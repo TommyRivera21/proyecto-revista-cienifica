@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/css/header-user-log.css" />
+
+<!-- Inicio de la cabecera -->
+<header>
+    <nav>
+        <div class="container-name">
+            <div class="user-name">
+                Bienvenido: <%= nombre %>
+            </div>
+        </div>
+        <a class="nav-aa" href="/inicio">Inicio</a>
+        <a class="nav-aa" href="/articles-log">Artículos</a>
+        <a class="nav-aa" href="/create">Subir un artículo</a>
+        <a class="nav-aa" href="/user-articulos">Mis artículos</a>
+        <a class="nav-aa" href="/perfil-usuario">Mi Perfil</a>     
+        <a class="nav-aa" href="/editar-perfil">Editar perfil</a>
+        <a class="nav-aa" href="/user-logout">Logout</a>
+    </nav>
+<!-- Buscador -->
+    <div class="header-div">
+        <input
+            type="text"
+            placeholder="Busca un articulo"
+            class="header-div-input"
+            />
+        <div class="header-div-icon">
+            <i class="icon ion-md-search"></i>
+        </div>
+    </div>
+    <div class="wave" style="height: 50px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+            style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;"></path>
+        </svg></div>
+</header>
+<!-- Fin de la cabecera -->

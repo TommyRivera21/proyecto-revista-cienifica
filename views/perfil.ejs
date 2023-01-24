@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include ('template/head') %>
+    <title>Perfil</title>
+    <!--Link para los estilos CSS locales-->
+    <link rel="stylesheet" href="css/perfil.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css"
+        />
+    
+</head>
+<body>
+    <!--Comienzo de la cabecera -->
+    <% if (login){%> <%- include ('template/header-user-log' , {nombre:name}) %>
+    <!--fin de la cabecera-->
+    <section class="seccion-perfil-usuario">
+        <div class="perfil-usuario-header">
+            <div class="perfil-usuario-portada">
+                <div class="perfil-usuario-avatar">
+                    <img
+                    src="https://lorempixel.com/200/200/people/"
+                    alt=""
+                    class="body-form-center-img"
+                    id="photo"
+                    />
+                    <button type="button" class="boton-avatar">
+                        <i class="far fa-image"></i>
+                    </button>
+                </div>
+                <button type="button" class="boton-portada">
+                    <i class="far fa-image"></i> Cambiar fondo
+                </button>
+            </div>
+        </div>
+        <div class="perfil-usuario-body">
+            <div class="perfil-usuario-bio">
+                <h3 class="titulo">Tommy Franys Rivera Loor</h3>
+            </div>
+            <div class="perfil-usuario-footer">
+                <div class="body-container-div-description">
+                    <p class="body-container-div-description-title">
+                        Datos personales:
+                    </p>
+                </div>
+                <div class="body-container-div-form">
+                    <div class="body-form-text">
+                        <label for="name" class="body-form-label">
+                            <i class="icon-profile ion-md-person"></i>Nombre:</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    class="body-form-input"
+                                    value="Tommy Franys Rivera Loor"
+                                    readonly
+                                />
+                    </div>
+                    <div class="body-form-text">
+                        <label for="ID" class="body-form-label">
+                            <i class="icon-profile ion-md-finger-print"></i>Cédula:</label>
+                                <input
+                                    type="text"
+                                    id="ID"
+                                    class="body-form-input"
+                                    value="1316556743"
+                                    readonly
+                                />
+                    </div>
+                    <div class="body-form-text">
+                        <label for="email" class="body-form-label">
+                            <i class="icon-profile ion-md-mail"></i>Correo electrónico:</label>
+                                <input
+                                    type="text"
+                                    id="email"
+                                    class="body-form-input"
+                                    value="tomyrivera1021@gmail.com"
+                                    readonly
+                                />
+                    </div>
+                    <div class="body-form-text">
+                        <label for="tel" class="body-form-label">
+                            <i class="icon-profile ion-md-call"></i>Teléfono:</label>
+                                <input
+                                    type="text"
+                                    id="tel"
+                                    class="body-form-input"
+                                    value="0960741444"
+                                    readonly
+                                />
+                    </div>
+                    <div class="body-form-text">
+                        <label for="date" class="body-form-label">
+                            <i class="icon-profile ion-md-calendar"></i>Fecha de Nacimiento:</label>
+                                <input
+                                    type="text"
+                                    id="date"
+                                    class="body-form-input"
+                                    value="21/08/2000"
+                                    readonly
+                                    />
+                    </div>
+                    <div class="body-form-text">
+                        <label for="age" class="body-form-label">
+                            <i class="icon-profile ion-md-hourglass"></i>Edad:</label>
+                                <input
+                                    type="text"
+                                    id="age"
+                                    class="body-form-input"
+                                    value="21 años"
+                                    readonly
+                                    />
+                    </div>
+                    <div class="body-form-text">
+                        <label for="gen" class="body-form-label">
+                            <i class="icon-profile ion-md-people"></i>Género:</label>
+                                <input
+                                    type="text"
+                                    id="gen"
+                                    class="body-form-input"
+                                    value="Masculino"
+                                    eadonly
+                                    />
+                    </div>
+                    <div class="body-form-text">
+                        <label for="city" class="body-form-label">
+                            <i class="icon-profile ion-md-business"></i>Lugar:</label>
+                                <input
+                                    type="text"
+                                    id="city"
+                                    class="body-form-input"
+                                    value="Manta - Ecuador"
+                                    readonly
+                                />
+                    </div>
+                    <div class="body-form-text">
+                        <label for="direction" class="body-form-label">
+                            <i class="icon-profile ion-md-pin"></i>Dirección:</label>
+                                <input
+                                    type="text"
+                                    id="direction"
+                                    class="body-form-input"
+                                    value="Calle 309 y Avenida 228 - Circunvalacion"
+                                    readonly
+                                />
+                    </div>
+                    <div class="body-form-center">
+                        <a href="/editar-perfil">
+                        <button type="submit" class="body-form-center-btn">
+                        Editar mi perfil
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="redes-sociales">
+                <a href="" class="boton-redes facebook fab fa-facebook-f"><i class="icon-facebook"></i></a>
+                <a href="" class="boton-redes twitter fab fa-twitter"><i class="icon-twitter"></i></a>
+                <a href="" class="boton-redes instagram fab fa-instagram"><i class="icon-instagram"></i></a>
+                </div>
+        </div>
+    </section>
+    <!--Inicio del FOOTER-->
+    <%- include ('template/footer') %>
+    <!--Final del FOOTER-->
+
+    <%} else{%> <%- include ('template/header') %> <%- include ('template/user' ) %>  <%- include ('template/footer') %> <%}%>
+</body>
+</html>

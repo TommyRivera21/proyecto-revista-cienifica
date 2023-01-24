@@ -1,0 +1,133 @@
+/*=====================================
+/*  INICIO DE RESETEO DE CSS
+esto solo resetea las configuraciones iniciales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+a,
+li {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+/* FIN DE RESETEO DE CSS */
+
+/* INICIO DE DECLARACION DE VARIABLES
+         variables con las que se trabajaran */
+:root {
+    --primarycolor: #313B50;
+    --secondarycolor: #ffffff;
+    --thirdcolor: #434c61;
+    --fourthcolor: #367588;
+    --cancel: #56070c;
+    --primarytext: 'Montserrat', sans-serif;
+    --secondtext: "Dancing Script", cursive;
+    --shadow: rgba(0, 0, 0, 0.75);
+        }
+/* FIN DE DECLARACION DE VARIABLES */
+
+body{
+    margin: 0px;
+    background-color:var(--secondarycolor)
+}
+.container{
+    width: 100%;
+    margin: 0px 0 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box{
+    width: 365px;
+    height: 450px;
+    text-align: center;
+    font-size: 0.7rem;
+    margin: 0 auto;
+    background-color:rgb(243, 243, 243); 
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+
+.button-box{
+    width: 240px;
+    margin: 30px auto;
+    position: relative;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.toggle-btn{
+    padding: 10px 22px;
+    background: var(--primarycolor);
+    outline: none;
+    position: relative;
+    border-radius: 25px;
+    color: var(--secondarycolor);
+    cursor: pointer;
+}
+
+.redes-sociales{
+    margin: 10px auto;
+    text-align: center;
+}
+
+.redes-sociales img{
+    width: 30px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 9px #e0e0e0;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.warning {
+    width: 100%;
+    grid-column: 1/-1;
+    text-align: center;
+    font-style: italic;
+    font-weight: bolder;
+    margin: auto;
+    color: var(--primarycolor);
+    padding: 10px 0 0;
+} 
+
+.form-login{
+    grid-column: 1/-1;
+    width: 80%;
+    padding: 10px 20px 10px;
+    margin: auto;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 15px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--primarycolor);
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn{
+    width: 75%;
+    padding: 10px 30px;
+    margin-top: 50px;
+    margin: auto;
+    background: var(--primarycolor);
+    outline: none;
+    border-radius: 30px;
+    color: var(--secondarycolor);
+    text-align: center;
+    cursor: pointer;
+}
+
+#login{
+    left: 50px;
+}

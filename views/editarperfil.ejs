@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include ('template/head') %>
+    <!--Link para los estilos CSS locales-->
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="css/editarperfil.css" />
+    <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css"
+        />
+    </head>
+</head>
+<body>
+    <% if (login){%> <%- include ('template/header-user-log' , {nombre:name}) %>
+        <h1> <% %> </h1>
+    <main class="body">
+            <!-- vista principal del formulario de datos del usuario -->
+            <section class="body-container">
+                <form action="">
+                <!-- contenedor para la navegacion de paginas -->
+                    <div class="body-container-div-nav">
+                        <a href="perfil.html" class="body-container-div-link">Perfil de ususario</a>
+                                <a href="editarperfil.html" class="body-container-div-link">Editar perfil</a>
+                    </div>
+                <!-- contenedor de la informacion personal del usuario -->
+                <div class="body-container-div">
+                    <div class="body-container-div-description">
+                        <p class="body-container-div-description-title">
+                            Información personal
+                        </p>
+                        <p class="body-container-div-description-p">
+                            Puede cambiar aquí su información personal
+                        </p>
+                        <p class="warning" id="warning"></p>
+                    </div>
+                    <div class="body-container-div-form">
+                        <div class="body-form-header">
+                            <img
+                                src="https://lorempixel.com/200/200/people/"
+                                alt=""
+                                class="body-form-header-img"
+                                id="preview"
+                            />
+                            <label for="file" class="body-form-header-label">
+                                Carga una foto</label>
+                        <div class="body-form-header-btn">
+                            <p class="body-form-header-btn-p">Subir Foto</p>
+                                <input
+                                    type="file"
+                                    class="body-form-header-btn-input"
+                                    id="file"
+                                    value="4194304"
+                                    accept="image/*"
+                                    onchange="previewImage();"
+                                    >
+                        </div>
+                    <p class="body-form-header-p">
+                        El tamaño máximo de archivo permitido es 4MB
+                    </p>
+                    <button class="body-form-header-btn-cancel">
+                        Eliminar foto
+                    </button>
+                </div>
+
+                    <label for="name" class="body-form-label">Nombres:</label>
+                    <input type="text" id="name" class="body-form-input" />
+                    <label for="last-name" class="body-form-label">Apellidos:</label>
+                    <input type="text" id="last-name" class="body-form-input" />
+                    <label for="ID" class="body-form-label">Cédula:</label>
+                    <input type="text" id="ID" class="body-form-input" />
+                    <label for="date" class="body-form-label">Fecha de Nacimiento:</label>
+                    <input type="date" id="date" class="body-form-input" />
+                    <label for="edad" class="body-form-label">Edad:</label>
+                    <input type="number" min="15" id="edad" class="body-form-input" />
+                    <label for="sex" class="body-form-label">Género:</label>
+                    <select id="sex" class="body-form-input">
+                        <option disabled selected>Elige una opción</option>
+                    </select>
+                </div>
+            </div>
+                <!-- contenedor de la informacion del contacto del usuario -->
+                <div class="body-container-div">
+                    <div class="body-container-div-description">
+                        <p class="body-container-div-description-title">
+                            Información de contacto
+                        </p>
+                        <p class="body-container-div-description-p">
+                            Puede cambiar aquí su información de contacto
+                        </p>
+                    </div>
+                    <div class="body-container-div-form">
+                        <label for="tel" class="body-form-label">Teléfono:</label>
+                        <input type="tel" id="tel" class="body-form-input" />
+
+                        <label for="country" class="body-form-label">País:</label>
+                        <select id="country" class="body-form-input">
+                        <option value="0" disabled selected>Elige una opción</option>
+                    </select>
+
+                    <label for="city" class="body-form-label">Ciudad:</label>
+                    <select id="city" class="body-form-input">
+                        <option value="0" disabled selected>Elige una opción</option>
+                    </select>
+
+                        <label for="direction" class="body-form-label">Dirección:</label>
+                        <input type="text" id="direction" class="body-form-input" />
+                    </div>
+                </div>
+                <!-- contenedor de la informacion de seguridad del usuario -->
+                <div class="body-container-div">
+                    <div class="body-container-div-description">
+                    <p class="body-container-div-description-title">Seguridad</p>
+                    <p class="body-container-div-description-p">
+                        Puede cambiar aquí su contraseña y correo electrónico
+                    </p>
+                </div>
+                <div class="body-container-div-form">
+                    <label for="email" class="body-form-label"
+                        >Correo electrónico:</label>
+                        <input type="text" id="email" class="body-form-input" />
+                            <label for="password" class="body-form-label">Contraseña:</label>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    class="body-form-input body-form-input-special"
+                                />
+                    <p class="body-form-p">
+                    Escribe una contraseña segura de mínimo 8 carácteres
+                    </p>
+                    <label for="password-confir" class="body-form-label"
+                        >Confirma tu contraseña:</label>
+                    <input
+                        type="password"
+                        id="password-confir"
+                        class="body-form-input body-form-input-special"
+                    />
+                    <p class="body-form-p">Vuelve a escribir la contraseña</p>
+                    </div>
+                </div>
+            </form>
+            <!-- contenedor de los botones de ajustes del usuario -->
+            <div class="body-container-div">
+                <div></div>
+                    <div class="body-container-div-btn">
+                        <button
+                            type="submit"
+                            class="body-form-btn-success btn-action"
+                            onclick="update()"
+                            >Actualizar la configuración de mi perfil
+                        </button>
+                        <a href="/editar-perfil">
+                        <button type="" class="body-form-btn-cancel btn-action">
+                        Cancelar
+                        </button>
+                        </a>
+                </div>
+                </div>
+            </section>
+    </main>
+    <script src="js/editarperfil.js"></script>
+    <!-- Inicio de footer -->
+        <%- include ('template/footer') %>
+    <!-- Fin del footer -->
+
+    <!-- Caso cuando no sea logeado -->
+    <%} else{%> <%- include ('template/header') %> <%- include ('template/user' ) %>  <%- include ('template/footer') %> <%}%>
+</body>
+</html>

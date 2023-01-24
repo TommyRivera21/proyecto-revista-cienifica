@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include ('template/head') %>
+    <title>Registrate</title>
+    <!-- link para los estilos CSS locales  -->
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+<!-- Inicio de la cabecera -->
+<%- include ('template/header') %>
+<!-- Fin de la cabecera -->
+    <main class="container">
+        <section class="form-box">
+            <div class="button-box">
+                <a href="/login" class="toggle-btn">Iniciar Sesión</a>
+                <a href="/registro" class="toggle-btn">Registrate</a>
+            </div>
+            <div class="redes-sociales">
+                <img src="images/fb.png" alt="icono_facebook">
+                <img src="images/g.png" alt="icono_twitter">
+                <img src="images/tw.png" alt="icono_google">
+            </div>
+            <p class="warning" id="warning"></p>
+            <br>
+            <form   
+                id="registro"
+                class="form-registro"
+                action="/registro-usuario"
+                method="POST">
+                <input 
+                    id="name"
+                    name="name"
+                    type="text" 
+                    class="registro-input" 
+                    placeholder="Nombre*" 
+                    required
+                    />
+                <input 
+                    id="lastName"
+                    name="lastName"
+                    type="text" 
+                    class="registro-input" 
+                    placeholder="Apellido*" 
+                    required
+                    />
+                <input
+                    id="email"
+                    name="email"
+                    type="email" 
+                    class="registro-input" 
+                    placeholder="Correo*" 
+                    required
+                    />
+                <input
+                    id="password"
+                    name="password"
+                    type="password" 
+                    class="registro-input" 
+                    placeholder="Contraseña*" 
+                    required
+                    />
+                <input
+                    id="password-confir"
+                    type="password" 
+                    class="registro-input" 
+                    placeholder="Confirma tu contraseña*" 
+                    required
+                    />
+                <input
+                    id="date"
+                    name="date"
+                    type="date" 
+                    class="registro-input"
+                    placeholder="Fecha de nacimiento"
+                    required
+                    />
+                <label for="terminos" class="registro-label">
+                    He leído y acepto los
+                    <a href="" class="registro-p-link">Términos y Condiciones</a> y la
+                    <a href="" class="registro-p-link">Política de privacidad</a>*
+                    <input
+                        type="checkbox"
+                        id="terminos"
+                        class="body-form-selection"
+                        required
+                    /></label>
+                <p class="registro-p">*Campos obligatorios</p>
+                    <br>
+                        <button type="submit" class="submit-btn" onclick="register()">Registrate</button>
+                        <p class="registro-p2">
+                            ¿Ya tienes una cuenta?
+                            <a href="/login" class="registro-p-link">Inicia Sesión</a>
+                        </p>
+            </form>
+        </section>
+    </main>
+    <!--Inicio del FOOTER-->
+    <%- include ('template/footer') %>
+    <!--Final del FOOTER-->
+<script src="js/registro.js"></script>
+</body>
+</html>

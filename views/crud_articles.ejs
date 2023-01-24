@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <%- include ('template/head') %>
+        <title>Revista Cientifica | Mis articulos</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css"
+        />
+    </head>
+  <body>
+    <% if (login){%> <%- include ('template/header-user-log' , {nombre:name}) %>
+        <h1> <% %> </h1>
+    <!-- crud -->
+    <div class="container">
+      <div class="container d-flex justify-content-end">
+        <a href="/create" class="btn btn-info fw-bold border-dark my-2">Agregar</a>
+      </div>
+
+      <table
+        id="table"
+        class="table table-bordered table-striped text-center my-2 table-hover"
+      >
+        <thead class="table">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Título</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Idioma</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Editorial</th>
+            <th scope="col">Temas</th>
+            <th scope="col">Numero de paginas</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% results.forEach((ARTICULOS)=>{%>
+          <tr>
+            <td><%= ARTICULOS.AR_ID%></td>
+            <td><%= ARTICULOS.AR_TITULO%></td>
+            <td><%= ARTICULOS.AR_AUTOR%></td>
+            <td><%= ARTICULOS.AR_IDIOMA%></td>
+            <td><%= ARTICULOS.AR_ISBN%></td>
+            <td><%= ARTICULOS.AR_EDITORIAL%></td>
+            <td><%= ARTICULOS.AR_TEMAS%></td>
+            <td><%= ARTICULOS.AR_NUMERO_PAGINAS%></td>
+            <td>
+              <a
+                href="/edit/<%= ARTICULOS.AR_ID%>"
+                class="btn btn-outline-success"
+                ><strong>𝑬</strong></a
+              >
+              <a
+                onclick="confirmar(<%= ARTICULOS.AR_ID%>)"
+                class="btn btn-outline-danger"
+              >
+                <strong>X</strong></a
+              >
+            </td>
+          </tr>
+          <% })%>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.all.min.js"></script>
+    <script src="js/crud_articles.js"></script>
+
+    <!-- Inicio de footer -->
+    <%- include ('template/footer') %>
+    <!-- Fin de -->
+
+    <!-- Caso cuando no sea logeado -->
+
+    <%} else{%> <%- include ('template/header') %> <%- include ('template/user' ) %>  <%- include ('template/footer') %> <%}%>
+  </body>
+</html>
